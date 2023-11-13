@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name></display-name>
+  <!-- 登录 -->
+  <welcome-file-list>
+    <welcome-file>/login.jsp</welcome-file>
+  </welcome-file-list>
+  <session-config> 
+	<session-timeout>60</session-timeout> 
+  </session-config> 
+  <!-- 登录校验 -->
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>servlet.loginServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+   <!-- 退出 -->
+  <servlet>
+    <servlet-name>loginOutServlet</servlet-name>
+    <servlet-class>servlet.loginOutServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginOutServlet</servlet-name>
+    <url-pattern>/system/loginOut</url-pattern>
+  </servlet-mapping>
+   <!-- 学生信息 -->
+  <servlet>
+    <servlet-name>userManagerServlet</servlet-name>
+    <servlet-class>servlet.userManagerServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>userManagerServlet</servlet-name>
+    <url-pattern>/system/userManager</url-pattern>
+  </servlet-mapping>
+   <!-- 实验课程 -->
+  <servlet>
+    <servlet-name>classesManagerServlet</servlet-name>
+    <servlet-class>servlet.classesManagerServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>classesManagerServlet</servlet-name>
+    <url-pattern>/system/classesManager</url-pattern>
+  </servlet-mapping>
+  <!-- 实验项目 -->
+  <servlet>
+    <servlet-name>projectManagerServlet</servlet-name>
+    <servlet-class>servlet.projectManagerServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>projectManagerServlet</servlet-name>
+    <url-pattern>/system/projectManager</url-pattern>
+  </servlet-mapping>
+  <!-- 实验报告 -->
+  <servlet>
+    <servlet-name>reportManagerServlet</servlet-name>
+    <servlet-class>servlet.reportManagerServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>reportManagerServlet</servlet-name>
+    <url-pattern>/system/reportManager</url-pattern>
+  </servlet-mapping>
+   <!-- 验证码 -->
+  <servlet>
+    <servlet-name>GeneImg</servlet-name>
+    <servlet-class>servlet.GeneImg</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GeneImg</servlet-name>
+    <url-pattern>/system/GeneImg</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
